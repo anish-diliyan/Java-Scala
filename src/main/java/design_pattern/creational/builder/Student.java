@@ -1,10 +1,10 @@
 package design_pattern.creational.builder;
 
 public class Student {
-    String name;
-    int age;
-    float psp;
-    String email;
+    public String name;
+    public int age;
+    public float psp;
+    public String email;
 
     Student(StudentBuilder sb){
         if(sb.email == null || sb.email.isEmpty()){
@@ -19,7 +19,7 @@ public class Student {
         this.email = sb.email;
     }
 
-    static StudentBuilder getBuilder(){
+    public static StudentBuilder getBuilder(){
         return new StudentBuilder();
     }
 }
